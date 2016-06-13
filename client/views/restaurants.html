@@ -1,0 +1,20 @@
+<div class="panel panel-default" ng-init="getRestaurants()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Randomize restaurants</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+        <div ng-repeat="restaurants in restaurants">
+            <div class="col-sm-4">
+                <div class="col-sm-4">
+                    <strong>{{restaurants.name}}</strong>
+                    <a class="btn btn-primary" href="{{restaurants.url}}">View details</a>
+                </div><!-- End cold-md-6-->
+                <div class="col-sm-6">
+                    <img class="thumbnail" src="{{restaurants.image_url}}"
+                </div><!-- End cold-md-6-->
+            </div><!-- End col-md-3 -->
+        </div><!-- End ng-repeat -->
+    </div><!-- End row -->
+  </div>
+</div>

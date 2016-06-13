@@ -1,0 +1,17 @@
+{
+  "name": "mealplanner",
+  "version": "1.0.0",
+  "description": "Meal randomizer app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+    "raw-loader": "^0.5.1"
+  },
+  "author": "Karen Sanchez",
+  "license": "ISC"
+}
