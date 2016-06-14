@@ -18,7 +18,7 @@ var Restaurants = module.exports = mongoose.model('restaurants', restaurantsSche
 // Get restaurants
 
 module.exports.getRestaurants = function(callback, limit){
-    Restaurants.find(callback).limit(limit);
+    Restaurants.find(callback).limit(3);
 }
 
 // Get restaurant

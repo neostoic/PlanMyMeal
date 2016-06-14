@@ -15,9 +15,15 @@ myApp.controller('RestaurantsController', ['$scope', '$http', '$location', '$rou
     console.log('RestaurantsController loaded...');
 
     // Create a scope function to get the books
+    //The scope is the binding part between the HTML (view)
+    //and the JavaScript (controller). The scope is an object
+    //with the available properties and methods. The scope is available for both the view and the controller.
     $scope.getRestaurants = function(){
         $http.get('/api/restaurants').success(function(response){
+
             $scope.restaurants = response;
+
+            // console.log($scope);
         });
     }
 
