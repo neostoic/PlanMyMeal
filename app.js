@@ -11,6 +11,16 @@ var bodyParser = require('body-parser');
 //Mongoose provides a straight-forward, schema-based solution to model
 // your application data. It includes built-in type casting, validation,
 //query building, business logic hooks and more, out of the box.
+
+var yelp = require('yelp');
+
+var oauthSignature = require('oauth-signature');
+var n = require('nonce')();
+var request = require('request');
+var qs = require('querystring');
+var _ = require('lodash');
+
+
 var mongoose = require('mongoose');
 //Specify what folder to use as a static folder
 app.use(express.static(__dirname+'/client'));

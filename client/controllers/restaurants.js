@@ -10,14 +10,18 @@ var myApp = angular.module('myApp');
 //
 // }]);
 
+
 // For it to work with the minified version we need to set the dependencies like this as well
 myApp.controller('RestaurantsController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
-    console.log('RestaurantsController loaded...');
+    // console.log('RestaurantsController loaded...');
 
     // Create a scope function to get the books
     //The scope is the binding part between the HTML (view)
     //and the JavaScript (controller). The scope is an object
     //with the available properties and methods. The scope is available for both the view and the controller.
+
+
+
     $scope.getRestaurants = function(){
         $http.get('/api/restaurants').success(function(response){
 

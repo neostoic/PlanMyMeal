@@ -1,20 +1,21 @@
-<div class="panel panel-default" ng-init="getRestaurants()">
-  <div class="panel-heading">
+<div class="panel panel-default" ng-init="getMainCtrl()">
+  <!-- <div class="panel-heading">
     <h3 class="panel-title">Randomize restaurants</h3>
-  </div>
+  </div> -->
   <div class="panel-body">
     <div class="row">
-        <div ng-repeat="restaurants in restaurants">
-            <div class="col-sm-4">
-                <div class="col-sm-4">
-                    <strong>{{restaurants.name}}</strong>
-                    <a class="btn btn-primary" href="{{restaurants.url}}">View details</a>
+        <div  ng-controller="MainCtrl">
+            <p><date-input name="info.name" message="info.message"></date-input></p>
+        <div  data-ng-repeat="business in businesses">>
+            <div class="col-lg-4">
+                    <img class="thumbnail" src="{{business.image_url}}">
+                <div class="col-lg-12">
+                    <h3>{{business.name}}</h3>
+                    <p><a class="btn btn-primary" href="{{business.url}}">View details &raquo;</a></p>
                 </div><!-- End cold-md-6-->
-                <div class="col-sm-6">
-                    <img class="thumbnail" src="{{restaurants.image_url}}"
-                </div><!-- End cold-md-6-->
-            </div><!-- End col-md-3 -->
+            </div><!-- End col-md-4 -->
         </div><!-- End ng-repeat -->
     </div><!-- End row -->
-  </div>
 </div>
+  </div><!-- End panel-body -->
+</div><!-- End panel panel_default -->
