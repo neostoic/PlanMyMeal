@@ -1,0 +1,4 @@
+/*.myimg {
+    text-align:center !important;
+    float: none !important; /* this is the part that makes it work */
+/*}*/

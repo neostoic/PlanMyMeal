@@ -4,8 +4,8 @@ var myApp = angular.module('myApp',['ngRoute']);
 // Here we will set up all of our routes
 myApp.config(function($routeProvider){
     $routeProvider.when('/', {
-        controller: 'RestaurantsController',
-        templateUrl: 'views/restaurants.html'
+        controller: 'apiController',
+        templateUrl: 'index.html'
     })
     .when('/restaurants/details/:id', {
         controller: 'RestaurantsController',

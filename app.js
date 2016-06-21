@@ -20,6 +20,7 @@ var request = require('request');
 var qs = require('querystring');
 var _ = require('lodash');
 
+var bodyParser = require('body-parser')
 
 var mongoose = require('mongoose');
 //Specify what folder to use as a static folder
