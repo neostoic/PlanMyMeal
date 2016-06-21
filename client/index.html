@@ -43,9 +43,9 @@
         <div class="container">
         <!-- intro + button -->
         <div class="panel-body text-center">
-            <h1>Marketing stuff!</h1>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+            <h1>Plan My Meal</h1>
+            <p class="lead">I am sure that and your special other often waste time trying to decide where to eat today. Well, if you are feeling adventurous, let PlanMyMeal decide that for you. The randomizer chooses where you should eat from breakfast to dessert!</p>
+            <p><a class="btn btn-lg btn-success" role="button" onClick="refreshPage()">Randomize my meals!</a></p>
         </div>
 
         <!-- yelp result -->
@@ -54,7 +54,26 @@
                         <div ng-controller="MainCtrl">
                               <p><date-input name="info.name" message="info.message"></date-input></p>
                           <div data-ng-repeat="business in businesses">
-                              <div class="col-lg-4">
+                              <div class="col-lg-3">
+                                      <p>Breakfast</p>
+                                      <img class="thumbnail" src="{{business.image_url}}">
+                                      <h3>{{business.name}}</h3>
+                                      <p><a class="btn btn-primary" href="{{business.url}}">View details &raquo;</a></p>
+                              </div><!-- End col-md-4 -->
+                              <div class="col-lg-3">
+                                      <p>Lunch</p>
+                                      <img class="thumbnail" src="{{business.image_url}}">
+                                      <h3>{{business.name}}</h3>
+                                      <p><a class="btn btn-primary" href="{{business.url}}">View details &raquo;</a></p>
+                              </div><!-- End col-md-4 -->
+                              <div class="col-lg-3">
+                                      <p>Dinner</p>
+                                      <img class="thumbnail" src="{{business.image_url}}">
+                                      <h3>{{business.name}}</h3>
+                                      <p><a class="btn btn-primary" href="{{business.url}}">View details &raquo;</a></p>
+                              </div><!-- End col-md-4 -->
+                              <div class="col-lg-3">
+                                      <p>Dessert</p>
                                       <img class="thumbnail" src="{{business.image_url}}">
                                       <h3>{{business.name}}</h3>
                                       <p><a class="btn btn-primary" href="{{business.url}}">View details &raquo;</a></p>
