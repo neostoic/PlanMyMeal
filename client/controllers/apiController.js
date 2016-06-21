@@ -11,14 +11,19 @@ myApp.controller('MainCtrl', ['$scope', 'MyYelpAPI', '$window', function($scope,
     $scope.total = [];
     $scope.businesses = [];
     MyYelpAPI.retrieveYelp('', function(data) {
-        $scope.total =  data.total;
+        $scope.businesses = data.businesses
+        console.log($scope.businesses)
 
-                        $scope.businesses = data.businesses
-                        console.log($scope.businesses)
+        var array = $scope.businesses
+        var random = Math.floor((Math.random() * array.length) + 1);
+        // console.log(array[random])
 
-                        var array = $scope.businesses
-                        var random = Math.floor((Math.random() * array.length) + 1);
-                        console.log(array[random])
+        var result = array[random]
+        console.log(result)
+
+        if (2 > 1) {
+            $scope.businesses = [result]
+        }
     });
 
 }]).factory("MyYelpAPI", function($http) {
