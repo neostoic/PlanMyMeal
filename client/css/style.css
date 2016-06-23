@@ -2,3 +2,15 @@
     text-align:center !important;
     float: none !important; /* this is the part that makes it work */
 /*}*/
+#caption {
+    /*margin: 0px 10px 175px 10px;*/
+}
+.carousel-inner,.carousel,.item,.container,.fill {
+  height:100vh;
+  width:100vw;
+}
+.carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+     width: 100%;
+     margin: auto;
+ }
