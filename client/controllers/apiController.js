@@ -34,16 +34,16 @@ myApp.controller('MainCtrl', ['$scope', 'MyYelpAPI', '$window', function($scope,
             var params = {
                     callback: 'angular.callbacks._0',
                     location: 'New+York',
-                    oauth_consumer_key: 'OwxDelqx2pfE6itrIcGclQ', //Consumer Key
-                    oauth_token: '13PpkYmq96ovcVcU0udu-EnPDBYFYxGH', //Token
+                    oauth_consumer_key: process.env.yelp_consumer_key, //Consumer Key
+                    oauth_token: process.env.yelp_token, //Token
                     oauth_signature_method: "HMAC-SHA1",
                     oauth_timestamp: new Date().getTime(),
                     oauth_nonce: randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
                     term: 'food',
                     limit: 15
                 };
-            var consumerSecret = 'SN-UpnymuUVE8hqt7TyALjSqfUY'; //Consumer Secret
-            var tokenSecret = 'qpVqU5IMkL3dbkrL7kdlKUsGV0o'; //Token Secret
+            var consumerSecret = process.env.yelp_consumer_secret; //Consumer Secret
+            var tokenSecret = process.env.yelp_token_secret; //Token Secret
             var signature = oauthSignature.generate(method, url, params, consumerSecret, tokenSecret, { encodeSignature: false});
             params['oauth_signature'] = signature;
             $http.jsonp(url, {params: params}).success(callback);
