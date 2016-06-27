@@ -50,60 +50,68 @@
 <!-- YELP responses
 ================================================== -->
 <div class="container-fluid">
- <div class="row-fluid">
-     <!-- yelp result -->
-     <!-- <div class="container-fluid"> -->
-     <!-- <div class="jumbotron"> -->
-                 <div class="row-fluid">
-                     <div ng-controller="MainCtrl">
-                           <p><date-input name="info.name" message="info.message"></date-input></p>
-                       <div data-ng-repeat="business in businesses">
-                            <!-- <div class="col-lg-offset-1"> -->
-                           <div class="col-lg-2 col-lg-offset-2 col-md-3 col-sm-2 col-xs-6 text-center">
-                                   <p>Breakfast</p>
-                               <div class="thumbnail">
-                                   <img class="img-responsive img-circle" src="{{business.image_url}}">
-                                   <h5>{{business.name}}</h5>
-                                   <h5>{{business.rating}}</h5>
-                                   <h5>"{{business.snippet_text}}"</h5>
-                                   <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
-                               </div><!-- End thumbnail -->
-                           </div><!-- End col-md-4 -->
-                           <div class="col-lg-2 col-md-3 col-sm-2 col-xs-6 text-center">
-                                   <p>Lunch</p>
-                               <div class="thumbnail">
-                                   <img class="img-responsive img-circle"  src="{{business.image_url}}">
-                                   <h5>{{business.name}}</h5>
-                                   <h5>{{business.rating}}</h5>
-                                   <h5>"{{business.snippet_text}}"</h5>
-                                   <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
-                               </div><!-- End thumbnail -->
-                       </div><!-- End col-md-4 -->
-                           <div class="col-lg-2 col-md-3 col-sm-2 col-xs-6 text-center">
-                                   <p>Dinner</p>
-                               <div class="thumbnail">
-                                   <img class="img-responsive img-circle"  src="{{business.image_url}}">
-                                   <h5>{{business.name}}</h5>
-                                   <h5>{{business.rating}}</h5>
-                                   <h5>"{{business.snippet_text}}"</h5>
-                                   <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
-                               </div><!-- End thumbnail -->
-                           </div><!-- End col-md-4 -->
-                           <div class="col-lg-2 col-md-3 col-sm-2 col-xs-6 text-center">
-                                   <p>Dessert</p>
-                               <div class="thumbnail">
-                                   <img class="img-responsive img-circle"  src="{{business.image_url}}">
-                                   <h5>{{business.name}}</h5>
-                                   <h5>{{business.rating}}</h5>
-                                   <h5>"{{business.snippet_text}}"</h5>
-                                   <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
-                               </div><!-- End thumbnail-->
-                           </div><!-- End col-md-4 -->
-                       </div><!-- End business in businesses -->
-                   </div><!-- End main-cnt -->
-               </div><!-- End row -->
-               <p><a class="btn btn-lg btn-success col-lg-offset-5 col-xs-offset-3" role="button" onClick="refreshPage()">Randomize my meals!</a></p>
-      <!-- </div><! End jumbotron -->
+  <div class="row-fluid">
+      <!-- yelp result -->
+      <!-- <div class="container-fluid"> -->
+      <!-- <div class="jumbotron"> -->
+                  <div class="row-fluid">
+                      <div ng-controller="MainCtrl">
+                            <p><date-input name="info.name" message="info.message"></date-input></p>
+                <div data-ng-repeat="business in businesses">
+                             <!-- <div class="col-lg-offset-1"> -->
+                            <div class="col-lg-2 col-lg-offset-2 col-md-3 col-sm-2 col-xs-6 text-center">
+                                    <p>Breakfast</p>
+                                <div class="thumbnail">
+                                    <img class="img-responsive img-circle" src="{{business.image_url}}">
+                                    <h5>{{business.name}}</h5>
+                                    <h5>{{business.rating}}</h5>
+                                    <h5>"{{business.snippet_text}}"</h5>
+                                    <h5>{{business.categories[0]}}</h5>
+                                    <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
+                                    <p><a class="btn btn-xs btn-info" id="breakfast" role="button" onClick="refreshPage()">I don't like this one!</a></p>
+                                </div><!-- End thumbnail -->
+                            </div><!-- End col-md-4 -->
+                 <!-- </div> -->
+                            <div class="col-lg-2 col-md-3 col-sm-2 col-xs-6 text-center">
+                                    <p>Lunch</p>
+                                <div class="thumbnail">
+                                    <img class="img-responsive img-circle"  src="{{business.image_url}}">
+                                    <h5>{{business.name}}</h5>
+                                    <h5>{{business.rating}}</h5>
+                                    <h5>"{{business.snippet_text}}"</h5>
+                                    <h5>{{business.categories[0]}}</h5>
+                                    <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
+                                    <p><a class="btn btn-xs btn-info" id="lunch" role="button" onClick="refreshPage()">I don't like this one!</a></p>
+                                </div><!-- End thumbnail -->
+                        </div><!-- End col-md-4 -->
+                            <div class="col-lg-2 col-md-3 col-sm-2 col-xs-6 text-center">
+                                    <p>Dinner</p>
+                                <div class="thumbnail">
+                                    <img class="img-responsive img-circle"  src="{{business.image_url}}">
+                                    <h5>{{business.name}}</h5>
+                                    <h5>{{business.rating}}</h5>
+                                    <h5>"{{business.snippet_text}}"</h5>
+                                    <h5>{{business.categories[0]}}</h5>
+                                    <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
+                                    <p><a class="btn btn-xs btn-info" id="dinner" role="button" onClick="refreshPage()">I don't like this one!</a></p>
+                                </div><!-- End thumbnail -->
+                            </div><!-- End col-md-4 -->
+                            <div class="col-lg-2 col-md-3 col-sm-2 col-xs-6 text-center">
+                                    <p>Dessert</p>
+                                <div class="thumbnail">
+                                    <img class="img-responsive img-circle"  src="{{business.image_url}}">
+                                    <h5>{{business.name}}</h5>
+                                    <h5>{{business.rating}}</h5>
+                                    <h5>"{{business.snippet_text}}"</h5>
+                                    <h5>{{business.categories[0]}}</h5>
+                                    <p><a class="btn btn-link btn-sm" href="{{business.url}}">View details &raquo;</a></p>
+                                    <p><a class="btn btn-xs btn-info" id="dessert" role="button" onClick="refreshPage()">I don't like this one!</a></p>
+                                </div><!-- End thumbnail-->
+                            </div><!-- End col-md-4 -->
+                        </div><!-- End business in businesses -->
+                    </div><!-- End main-cnt -->
+                </div><!-- End row -->
+       <!-- </div><! End jumbotron -->
 </div><!-- End row fluid -->
 </div><!-- End container fluid -->
 <footer  id="footer">

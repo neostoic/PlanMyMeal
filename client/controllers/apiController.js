@@ -39,7 +39,7 @@ myApp.controller('MainCtrl', ['$scope', 'MyYelpAPI', '$window', function($scope,
                     oauth_signature_method: "HMAC-SHA1",
                     oauth_timestamp: new Date().getTime(),
                     oauth_nonce: randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
-                    term: 'coffee'
+                    term: 'bakery'
                     // limit: 15
                 };
             var consumerSecret = 'SN-UpnymuUVE8hqt7TyALjSqfUY'; //Consumer Secret
